@@ -1,0 +1,1145 @@
+[5/31/2026 6:31 PM] Sify Serenity: /* ==========================
+   GENERAL STYLES
+========================== */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:'Poppins',sans-serif;
+  background:#000000;
+  color:#333;
+  overflow-x:hidden;
+}
+
+a{
+  text-decoration:none;
+}
+
+/* ==========================
+   HEADER
+========================== */
+
+.site-header{
+  background:rgba(0,0,0,0.8);
+  color:rgb(248, 243, 243);
+  padding:20px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  position:sticky;
+  top:0;
+  z-index:1000;
+}
+
+.site-header nav a{
+  color:rgb(0, 0, 0);
+  margin-left:20px;
+  position:relative;
+  transition:.3s;
+}
+
+.site-header nav a::after{
+  content:"";
+  position:absolute;
+  width:0;
+  height:3px;
+  left:0;
+  bottom:-5px;
+  background:#3b82f6;
+  transition:.4s;
+}
+
+.site-header nav a:hover::after{
+  width:100%;
+}
+
+/* ==========================
+   HOME PAGE HERO
+========================== */
+
+.hero{
+  min-height:90vh;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:70px;
+  color:white;
+
+  background:
+  linear-gradient(
+  rgba(0,0,0,.55),
+  rgba(0,0,0,.55)),
+  url("https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg");
+
+  background-size:cover;
+  background-position:center;
+}
+
+.hero-text{
+  max-width:600px;
+}
+
+.hero-text h2{
+  font-size:3rem;
+  margin-bottom:20px;
+}
+
+.hero-text p{
+  font-size:1.2rem;
+  margin-bottom:25px;
+}
+
+.hero-image img{
+  width:500px;
+  border-radius:20px;
+  transition:.6s;
+}
+
+.hero-image img:hover{
+  transform:scale(1.08) rotate(2deg);
+}
+
+.cta{
+  background:#2563eb;
+  color:white;
+  padding:15px 30px;
+  border-radius:40px;
+  transition:.4s;
+}
+
+.cta:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 25px #2563eb;
+}
+/* =========================
+   STUDENT / SCHOLARSHIP MISSION
+   ========================= */
+
+.mission {
+  max-width: 900px;
+  margin: 70px auto;
+  padding: 50px 35px;
+  text-align: center;
+
+  background: rgba(30, 41, 59, 0.85);
+  border-radius: 18px;
+  border-left: 6px solid #38bdf8;
+
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.35);
+  transition: 0.3s ease;
+}
+
+/* Subtle hover (professional, not flashy) */
+.mission:hover {
+  transform: translateY(-4px);
+  border-left-color: #facc15;
+}
+
+/* Title (scholarship-focused look) */
+.mission h2 {
+  font-size: 2.3rem;
+  margin-bottom: 15px;
+  font-weight: 700;
+
+  color: #38bdf8;
+  letter-spacing: 0.5px;
+}
+
+/* Paragraph styling */
+.mission p {
+  font-size: 1.15rem;
+  line-height: 1.8;
+  color: #e2e8f0;
+  max-width: 750px;
+  margin: auto;
+}
+
+/* Small decorative line under title */
+.mission h2::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 3px;
+  margin: 12px auto 0;
+  background: linear-gradient(90deg, #38bdf8, #facc15);
+  border-radius: 10px;
+}
+}
+/* ==========================
+   HOME CARDS
+========================== */
+
+.home-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:25px;
+  padding:50px;
+}
+
+.home-card{
+  background:white;
+  padding:30px;
+  border-radius:20px;
+  text-align:center;
+  transition:.4s;
+  box-shadow:0 10px 20px rgba(0,0,0,.1);
+}
+
+.home-card:hover{
+  transform:translateY(-10px);
+}
+
+.cta-small{
+  display:inline-block;
+  margin-top:15px;
+  padding:12px 25px;
+  border-radius:30px;
+  color:white;
+}
+
+/* Extracurricular Button */
+
+.home-card:nth-child(1) .cta-small{
+  background:#3b82f6;
+  transition:.4s;
+}
+
+.home-card:nth-child(1) .cta-small:hover{
+  transform:translateY(-8px);
+  box-shadow:0 10px 30px rgba(59,130,246,.6);
+}
+
+/* Scholarship Button */
+
+.home-card:nth-child(2) .cta-small{
+  background:#10b981;
+  transition:.4s;
+}
+
+.home-card:nth-child(2) .cta-small:hover{
+  transform:rotate(3deg) scale(1.08);
+}
+
+/* SAT Button */
+
+.home-card:nth-child(3) .cta-small{
+  background:#f59e0b;
+  transition:.4s;
+}
+
+.home-card:nth-child(3) .cta-small:hover{
+  letter-spacing:2px;
+  box-shadow:0 0 30px #f59e0b;
+}
+
+/* ==========================
+   EXTRACURRICULAR PAGE
+========================== */
+
+.extracurricular-page{
+  min-height:100vh;
+  background:
+  linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+  url("https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg");
+  background-size:cover;
+  background-position:center;
+}
+
+.extracurricular-btn{
+  background:#2563eb;
+  color:white;
+  border:none;
+  padding:12px 25px;
+  border-radius:30px;
+  transition:.4s;
+}
+
+.extracurricular-btn:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 25px #2563eb;
+}
+
+/* ==========================
+   SCHOLARSHIP PAGE
+========================== */
+
+/* GRID LAYOUT */
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 40px;
+  max-width: 1200px;
+  margin: auto;
+}
+
+/* MODERN CARD STYLE */
+.modern-card {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 16px;
+  padding: 20px;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 8px 25px rgba(0,0,0,0.3);
+  transition: 0.3s ease;
+}
+
+/* HOVER EFFECT */
+.modern-card:hover {
+  transform: translateY(-10px);
+  border-color: #10b981;
+  box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+}
+
+/* TITLE */
+.modern-card h3 {
+  margin-bottom: 10px;
+}
+
+.modern-card a {
+  text-decoration: none;
+  color: #ffffff;
+  font-weight: bold;
+}
+
+/* TEXT */
+.modern-card p {
+  color: #cbd5e1;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ==========================
+   SAT PREP PAGE
+========================== */
+[5/31/2026 6:31 PM] Sify Serenity: .satprep-container{
+  min-height:100vh;
+  background:
+  linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+  url("https://images.pexels.com/photos/256417/pexels-photo-256417.jpeg");
+  background-size:cover;
+  background-position:center;
+  color:white;
+  padding:40px;
+}
+
+.module-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+  gap:20px;
+}
+
+.module-card{
+  background:white;
+  color:#333;
+  padding:30px;
+  text-align:center;
+  border-radius:20px;
+  cursor:pointer;
+  transition:.5s;
+}
+
+.module-card:hover{
+  transform:
+  perspective(1000px)
+  rotateY(10deg)
+  scale(1.08);
+
+  box-shadow:0 15px 30px rgba(255,255,255,.4);
+}
+/* =========================
+   SAT PREP MODERN UI
+   ========================= */
+
+/* Page background upgrade (keeps your script unchanged) */
+.satprep-container {
+  padding: 50px;
+  max-width: 1100px;
+  margin: auto;
+
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+/* Hero section */
+.satprep-hero {
+  text-align: center;
+  margin-bottom: 40px;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.satprep-hero h2 {
+  font-size: 3rem;
+  background: linear-gradient(90deg, #38bdf8, #a78bfa, #facc15);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+}
+
+.satprep-hero p {
+  color: #cbd5e1;
+  font-size: 1.1rem;
+}
+
+/* Module cards (glow effect) */
+.module-card {
+  background: rgba(30, 41, 59, 0.8);
+  border: 1px solid rgba(255,255,255,0.1);
+  box-shadow: 0 0 15px rgba(56,189,248,0.15);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.module-card::before {
+  content: "";
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(circle, rgba(56,189,248,0.2), transparent 60%);
+  transform: scale(0);
+  transition: transform 0.5s ease;
+}
+
+.module-card:hover::before {
+  transform: scale(1);
+}
+
+.module-card:hover {
+  transform: translateY(-8px) scale(1.03);
+  box-shadow: 0 0 25px rgba(167,139,250,0.3);
+}
+
+/* Quiz question card */
+.quiz-area .question {
+  background: rgba(30, 41, 59, 0.85);
+  border-left: 4px solid #38bdf8;
+  padding: 25px;
+  margin-bottom: 18px;
+  border-radius: 12px;
+  animation: slideUp 0.4s ease;
+}
+
+/* Options buttons */
+.option {
+  background: #1e293b;
+  border: 1px solid rgba(255,255,255,0.08);
+  color: #e2e8f0;
+  font-weight: 500;
+  transition: 0.3s;
+}
+
+.option:hover {
+  background: linear-gradient(90deg, #38bdf8, #a78bfa);
+  color: #0f172a;
+  transform: scale(1.02);
+}
+
+/* Finish button */
+#quiz button:last-child {
+  display: block;
+  margin: 30px auto;
+  padding: 12px 25px;
+  background: linear-gradient(90deg, #22c55e, #38bdf8);
+  border: none;
+  border-radius: 10px;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#quiz button:last-child:hover {
+  transform: scale(1.05);
+}
+
+/* Results box */
+.results-area {
+  text-align: center;
+  padding: 20px;
+  font-size: 1.2rem;
+  color: #facc15;
+  animation: fadeIn 0.8s ease;
+}
+
+/* Dashboard upgrade */
+.dashboard-area {
+  margin-top: 50px;
+  padding: 20px;
+  background: rgba(30,41,59,0.7);
+  border-radius: 15px;
+}
+
+.progress-bar {
+  margin: 12px 0;
+  padding: 10px;
+  border-radius: 10px;
+  background: rgba(255,255,255,0.05);
+}
+
+/* Progress fill animation */
+.fill {
+  background: linear-gradient(90deg, #38bdf8, #a78bfa);
+  box-shadow: 0 0 10px rgba(56,189,248,0.5);
+}
+
+/* Leaderboard */
+.dashboard-area ol {
+  margin-top: 15px;
+  padding-left: 20px;
+}
+
+.dashboard-area li {
+  padding: 8px;
+  margin: 5px 0;
+  background: rgba(255,255,255,0.05);
+  border-radius: 8px;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideUp {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+/* ==========================
+   CONTACT PAGE
+========================== */
+
+.contact-section{
+  min-height:100vh;
+  background:
+  linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+  url("https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg");
+  background-size:cover;
+  background-position:center;
+  color:white;
+  padding:50px;
+}
+
+.contact-form{
+  max-width:600px;
+  margin:auto;
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  margin:10px 0;
+  padding:15px;
+  border:none;
+  border-radius:10px;
+}
+
+.contact-form button{
+  background:#8b5cf6;
+  color:white;
+  border:none;
+  padding:15px 30px;
+  border-radius:30px;
+  cursor:pointer;
+  transition:.4s;
+}
+
+.contact-form button:hover{
+  transform:scale(1.1);
+  box-shadow:0 0 30px #8b5cf6;
+}
+
+/* ==========================
+   TESTIMONIALS
+========================== */
+
+.testimonials{
+    padding: 80px 8%;
+    background: #0f172a;
+}
+
+.testimonials h2{
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 50px;
+    color: #fff;
+}
+
+.testimonial-grid{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+.testimonial{
+    background: #0e64ee;
+    padding: 30px;
+    border-radius: 20px;
+
+    border: 1px solid rgba(6, 166, 230, 0.08);
+
+    box-shadow: 0 10px 25px rgba(0,0,0,0.25);
+
+    transition: all 0.3s ease;
+}
+
+.testimonial:hover{
+    transform: translateY(-10px);
+
+    border-color: #8022ec;
+
+    box-shadow: 0 20px 40px rgba(59,130,246,0.25);
+}
+
+.testimonial p{
+    font-size: 1.05rem;
+    line-height: 1.8;
+    margin-bottom: 20px;
+    color: #f8fafc;
+}
+
+.testimonial span{
+    color: #60a5fa;
+    font-weight: 600;
+}
+.testimonial::before{
+    content:"❝";
+    font-size:3rem;
+    color:#3b82f6;
+    display:block;
+    margin-bottom:10px;
+}
+
+/* ==========================
+   ANIMATION
+========================== */
+
+@keyframes fadeUp{
+  from{
+    opacity:0;
+    transform:translateY(40px);
+  }
+
+  to{
+    opacity:1;
+    transform:translateY(0);
+  }
+}
+
+.hero,
+.home-card,
+.card,
+.module-card,
+.testimonial,
+.contact-section{
+  animation:fadeUp 1s ease;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+.site-footer{
+  background:#111827;
+  color:white;
+  text-align:center;
+  padding:25px;
+}
+
+.footer-links a{
+  color:#60a5fa;
+  margin:0 10px;
+}
+[5/31/2026 6:39 PM] Sify Serenity: /* =========================
+   GLOBAL STYLES
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    color:white;
+    animation:pageLoad 1s ease;
+    overflow-x:hidden;
+}
+
+@keyframes pageLoad{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.site-header{
+    background:rgba(0,0,0,.8);
+    backdrop-filter:blur(10px);
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.site-header nav a{
+    color:white;
+    margin-left:20px;
+    text-decoration:none;
+    position:relative;
+    transition:.4s;
+}
+
+.site-header nav a::after{
+    content:"";
+    position:absolute;
+    width:0;
+    height:3px;
+    background:#60a5fa;
+    left:0;
+    bottom:-5px;
+    transition:.4s;
+}
+
+.site-header nav a:hover::after{
+    width:100%;
+}
+
+/* =========================
+   HOME PAGE
+========================= */
+
+.hero{
+    min-height:100vh;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:80px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.6),rgba(0,0,0,.6)),
+    url("https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.hero-text h2{
+    font-size:4rem;
+    margin-bottom:20px;
+}
+
+.hero-text p{
+    font-size:1.2rem;
+    margin-bottom:25px;
+}
+
+.hero-image img{
+    width:500px;
+    border-radius:20px;
+    transition:.6s;
+}
+
+.hero-image img:hover{
+    transform:scale(1.08) rotate(2deg);
+}
+
+.cta{
+    background:#2563eb;
+    color:white;
+    padding:15px 30px;
+    border-radius:40px;
+    text-decoration:none;
+    transition:.4s;
+}
+
+.cta:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 30px #2563eb;
+}
+
+/* =========================
+   HOME CARDS
+========================= */
+
+.home-grid{
+    padding:60px;
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.home-card{
+    background:rgba(255,255,255,.1);
+    backdrop-filter:blur(15px);
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    transition:.5s;
+}
+
+.home-card:hover{
+    transform:translateY(-15px);
+    box-shadow:0 20px 40px rgba(0,0,0,.3);
+}
+
+.cta-small{
+    display:inline-block;
+    margin-top:15px;
+    padding:12px 25px;
+    border-radius:30px;
+    color:white;
+    text-decoration:none;
+}
+
+/* Extracurricular Button */
+
+.home-card:nth-child(1) .cta-small{
+    background:#3b82f6;
+}
+
+.home-card:nth-child(1) .cta-small:hover{
+    transform:translateY(-8px);
+    box-shadow:0 0 25px #3b82f6;
+}
+
+/* Scholarship Button */
+
+.home-card:nth-child(2) .cta-small{
+    background:#10b981;
+}
+
+.home-card:nth-child(2) .cta-small:hover{
+    transform:rotate(3deg) scale(1.08);
+}
+
+/* SAT Button */
+
+.home-card:nth-child(3) .cta-small{
+    background:#f59e0b;
+}
+
+.home-card:nth-child(3) .cta-small:hover{
+    letter-spacing:2px;
+    box-shadow:0 0 30px #f59e0b;
+}
+
+/* =========================
+   EXTRACURRICULAR PAGE
+========================= */
+
+.extracurricular-page{
+    min-height:100vh;
+    padding:60px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url("https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.feature-card{
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    padding:25px;
+    transition:.5s;
+}
+
+.feature-card:hover{
+    transform:translateY(-15px) rotate(2deg);
+    box-shadow:0 0 35px #2563eb;
+}
+
+.extracurricular-btn{
+    background:#2563eb;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    transition:.4s;
+}
+
+.extracurricular-btn:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 25px #2563eb;
+}
+
+/* =========================
+   SCHOLARSHIP PAGE
+========================= */
+[5/31/2026 6:39 PM] Sify Serenity: .scholarship-page{
+    min-height:100vh;
+    padding:40px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url("https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.card{
+    background:rgba(255,255,255,.12);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    padding:25px;
+    transition:.5s;
+}
+
+.card:hover{
+    transform:scale(1.08);
+    box-shadow:0 0 35px #10b981;
+}
+
+.scholarship-btn{
+    background:#10b981;
+    color:white;
+    border:none;
+    padding:12px 25px;
+    border-radius:30px;
+    transition:.5s;
+}
+
+.scholarship-btn:hover{
+    transform:translateY(-10px);
+    box-shadow:0 0 30px #10b981;
+}
+
+/* =========================
+   SAT PREP PAGE
+========================= */
+
+.satprep-container{
+    min-height:100vh;
+    padding:60px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url("https://images.pexels.com/photos/256417/pexels-photo-256417.jpeg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.module-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(200px,1fr));
+    gap:20px;
+}
+
+.module-card{
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    padding:30px;
+    text-align:center;
+    cursor:pointer;
+    transition:.5s;
+    animation:floatCard 4s infinite ease-in-out;
+}
+
+@keyframes floatCard{
+    0%,100%{
+        transform:translateY(0);
+    }
+    50%{
+        transform:translateY(-10px);
+    }
+}
+
+.module-card:hover{
+    transform:scale(1.08);
+    box-shadow:
+    0 0 20px #60a5fa,
+    0 0 40px #60a5fa;
+}
+
+/* =========================
+   CONTACT PAGE
+========================= */
+
+.contact-section{
+    min-height:100vh;
+    padding:60px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.65),rgba(0,0,0,.65)),
+    url("https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.contact-form{
+    max-width:600px;
+    margin:auto;
+}
+
+.contact-form input,
+.contact-form textarea{
+    width:100%;
+    margin:10px 0;
+    padding:15px;
+    border:none;
+    border-radius:10px;
+    transition:.4s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+    outline:none;
+    transform:scale(1.02);
+    box-shadow:0 0 20px #8b5cf6;
+}
+
+.contact-form button{
+    background:#8b5cf6;
+    color:white;
+    border:none;
+    padding:15px 30px;
+    border-radius:30px;
+    cursor:pointer;
+    transition:.4s;
+}
+
+.contact-form button:hover{
+    transform:scale(1.1);
+    box-shadow:0 0 35px #8b5cf6;
+}
+
+/* =========================
+   TESTIMONIALS
+========================= */
+
+.testimonial{
+    background:rgba(0, 0, 0, 0.1);
+    backdrop-filter:blur(12px);
+    border-radius:20px;
+    padding:20px;
+    transition:.5s;
+}
+
+.testimonial:hover{
+    transform:scale(1.05);
+    box-shadow:0 0 30px #60a5fa;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.site-footer{
+    background:#111827;
+    text-align:center;
+    padding:25px;
+}
+
+.footer-links a{
+    color:#60a5fa;
+    margin:0 10px;
+    text-decoration:none;
+}
+.auth-container {
+  width: 320px;
+  margin: 100px auto;
+  padding: 30px;
+
+  background: rgba(30,41,59,0.9);
+  border-radius: 15px;
+  text-align: center;
+
+  box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+}
+
+.auth-container input {
+  width: 90%;
+  padding: 10px;
+  margin: 10px 0;
+
+  border: none;
+  border-radius: 8px;
+}
+
+.auth-container button {
+  width: 100%;
+  padding: 10px;
+
+  background: #38bdf8;
+  border: none;
+  border-radius: 8px;
+
+  color: #0f172a;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.auth-container button:hover {
+  background: #facc15;
+}
+/* =========================
+   MOBILE RESPONSIVE FIX
+   ========================= */
+
+@media (max-width: 768px) {
+
+  .hero {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .hero-image img {
+    width: 100%;
+    max-width: 320px;
+    margin-top: 20px;
+  }
+
+  .card {
+    width: 100%;
+    max-width: 320px;
+  }
+
+  .satprep-container {
+    padding: 20px;
+  }
+
+  .mission {
+    margin: 30px 15px;
+    padding: 30px 20px;
+  }
+
+  .site-header {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .site-header nav a {
+    display: inline-block;
+    margin: 5px;
+  }
+}

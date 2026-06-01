@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Extracurriculars - College Habesha</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>Extracurricular Opportunities</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="scholarship.html">Scholarships</a>
+      <a href="satprep (1).html">SAT Prep</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <!-- Filter/Search Bar -->
+  <section class="filter-bar">
+    <input type="text" id="searchClub" placeholder="Search extracurriculars...">
+    <select id="filterCategory">
+      <option value="all">All Categories</option>
+      <option value="stem">STEM</option>
+      <option value="arts">Arts</option>
+      <option value="leadership">Leadership</option>
+      <option value="service">Service</option>
+      <option value="sports">Sports</option>
+    </select>
+  </section>
+
+  <!-- Cards Section -->
+  <main class="cards" id="clubList">
+    <div class="card" data-category="leadership">
+      <h3><a href="https://www.nhs.us/" target="_blank">🏅 National Honor Society</a></h3>
+      <p>Recognizes academic excellence and leadership through service projects.</p>
+    </div>
+
+    <div class="card" data-category="leadership">
+      <h3><a href="https://www.deca.org/" target="_blank">💼 DECA</a></h3>
+      <p>Prepares leaders in marketing, finance, hospitality, and management.</p>
+    </div>
+
+    <div class="card" data-category="stem">
+      <h3><a href="https://www.scienceolympiad.org/" target="_blank">🔬 Science Olympiad</a></h3>
+      <p>National STEM competition fostering teamwork and innovation.</p>
+    </div>
+
+    <div class="card" data-category="leadership">
+      <h3><a href="https://unausa.org/model-un/" target="_blank">🌍 Model United Nations</a></h3>
+      <p>Simulates UN debates, teaching diplomacy and global awareness.</p>
+    </div>
+
+    <div class="card" data-category="stem">
+      <h3><a href="https://www.firstinspires.org/robotics" target="_blank">🤖 Robotics Club</a></h3>
+      <p>Hands‑on engineering experience building robots for competitions.</p>
+    </div>
+
+    <div class="card" data-category="leadership">
+      <h3><a href="#">🗣️ Debate Club</a></h3>
+      <p>Develops critical thinking, argumentation, and public speaking skills.</p>
+    </div>
+
+    <div class="card" data-category="arts">
+      <h3><a href="#">🎶 Music Club</a></h3>
+      <p>Encourages creativity and collaboration through performance and composition.</p>
+    </div>
+
+    <div class="card" data-category="arts">
+      <h3><a href="#">🎨 Art Club</a></h3>
+      <p>Provides a space for students to express themselves through visual arts.</p>
+    </div>
+
+    <div class="card" data-category="sports">
+      <h3><a href="#">⚽ Sports Teams</a></h3>
+      <p>Builds teamwork, discipline, and resilience through athletics.</p>
+    </div>
+
+    <div class="card" data-category="service">
+      <h3><a href="#">🤝 Community Service</a></h3>
+      <p>Engages students in volunteer work to make a positive impact locally.</p>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; 2026 College Habesha. All rights reserved.</p>
+    <div class="footer-links">
+      <a href="#">Contact</a>
+      <a href="#">Privacy Policy</a>
+      <a href="#">Follow us on Social Media</a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,607 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Poppins', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #0b0f1c;
+  color: #e2e8f0;
+  line-height: 1.6;
+  overflow-x: hidden;
+}
+
+/* Smooth page load animation */
+@keyframes pageLoad {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+body {
+  animation: pageLoad 0.8s ease-out;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+/* ==========================
+   HEADER & NAVIGATION
+========================== */
+.site-header {
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1.2rem 2.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.site-header h1 {
+  font-size: 1.7rem;
+  font-weight: 700;
+  background: linear-gradient(135deg, #a5b4fc, #60a5fa);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.site-header nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.8rem;
+}
+
+.site-header nav a {
+  color: #cbd5e1;
+  font-weight: 500;
+  font-size: 1rem;
+  position: relative;
+  padding: 0.3rem 0;
+  transition: color 0.3s ease;
+}
+
+.site-header nav a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2.5px;
+  left: 0;
+  bottom: -4px;
+  background: #60a5fa;
+  border-radius: 2px;
+  transition: width 0.3s ease;
+}
+
+.site-header nav a:hover {
+  color: #ffffff;
+}
+
+.site-header nav a:hover::after {
+  width: 100%;
+}
+
+/* ==========================
+   HOME PAGE - HERO SECTION
+========================== */
+.hero {
+  min-height: 90vh;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  padding: 3rem 2.5rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.65), rgba(0, 0, 0, 0.7)),
+              url('https://images.pexels.com/photos/267885/pexels-photo-267885.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') center/cover no-repeat;
+  gap: 2.5rem;
+}
+
+.hero-text {
+  max-width: 600px;
+}
+
+.hero-text h2 {
+  font-size: clamp(2.4rem, 6vw, 3.8rem);
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.hero-text p {
+  font-size: 1.25rem;
+  margin-bottom: 2rem;
+  color: #e2e8f0;
+}
+
+.hero-image img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 24px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.6);
+  transition: transform 0.5s ease;
+}
+
+.hero-image img:hover {
+  transform: scale(1.04) rotate(0.5deg);
+}
+
+.cta {
+  display: inline-block;
+  background: #2563eb;
+  color: white;
+  padding: 0.9rem 2.2rem;
+  border-radius: 40px;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 10px 25px rgba(37, 99, 235, 0.4);
+}
+
+.cta:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 35px rgba(37, 99, 235, 0.6);
+  background: #1d4ed8;
+}
+
+/* ==========================
+   MISSION SECTION
+========================== */
+.mission {
+  padding: 4rem 2rem;
+  background: #0f172a;
+  text-align: center;
+}
+
+.mission h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  color: #f1f5f9;
+}
+
+.mission p {
+  max-width: 750px;
+  margin: 0 auto;
+  color: #94a3b8;
+  font-size: 1.15rem;
+  line-height: 1.7;
+}
+
+/* ==========================
+   HOME CARDS GRID
+========================== */
+.home-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 2rem;
+  padding: 3rem 2.5rem;
+  background: #0f172a;
+}
+
+.home-card {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  transition: all 0.4s ease;
+}
+.home-card:hover {
+  transform: translateY(-12px);
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.4);
+  background: rgba(255, 255, 255, 0.08);
+}
+
+.home-card h3 {
+  font-size: 1.6rem;
+  margin-bottom: 0.8rem;
+  color: #f8fafc;
+}
+
+.home-card p {
+  color: #cbd5e1;
+  margin-bottom: 1.8rem;
+  font-size: 0.95rem;
+}
+
+.cta-small {
+  display: inline-block;
+  padding: 0.7rem 1.8rem;
+  border-radius: 30px;
+  font-weight: 600;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+/* Extracurricular button (blue) */
+.home-card:nth-child(1) .cta-small {
+  background: #3b82f6;
+  box-shadow: 0 6px 18px rgba(59, 130, 246, 0.35);
+}
+.home-card:nth-child(1) .cta-small:hover {
+  background: #2563eb;
+  transform: translateY(-5px);
+  box-shadow: 0 12px 28px rgba(59, 130, 246, 0.6);
+}
+
+/* Scholarship button (emerald) */
+.home-card:nth-child(2) .cta-small {
+  background: #10b981;
+  box-shadow: 0 6px 18px rgba(16, 185, 129, 0.35);
+}
+.home-card:nth-child(2) .cta-small:hover {
+  background: #059669;
+  transform: rotate(2deg) scale(1.05);
+  box-shadow: 0 12px 28px rgba(16, 185, 129, 0.6);
+}
+
+/* SAT Prep button (amber) */
+.home-card:nth-child(3) .cta-small {
+  background: #f59e0b;
+  box-shadow: 0 6px 18px rgba(245, 158, 11, 0.35);
+}
+.home-card:nth-child(3) .cta-small:hover {
+  background: #d97706;
+  letter-spacing: 1px;
+  box-shadow: 0 12px 30px rgba(245, 158, 11, 0.7);
+}
+
+/* ==========================
+   TESTIMONIALS SECTION
+========================== */
+.testimonials {
+  padding: 3.5rem 2rem;
+  background: #0b1120;
+  text-align: center;
+}
+
+.testimonials h2 {
+  font-size: 2rem;
+  margin-bottom: 2.5rem;
+  color: #f1f5f9;
+}
+
+.testimonial-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 2rem;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.testimonial {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(8px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  padding: 1.8rem;
+  transition: all 0.35s ease;
+}
+
+.testimonial:hover {
+  transform: scale(1.04);
+  box-shadow: 0 15px 30px rgba(59, 130, 246, 0.25);
+  border-color: rgba(96, 165, 250, 0.4);
+}
+
+.testimonial p {
+  font-style: italic;
+  color: #e2e8f0;
+  margin-bottom: 1rem;
+}
+
+.testimonial span {
+  font-weight: 600;
+  color: #94a3b8;
+  font-size: 0.9rem;
+}
+
+/* ==========================
+   EXTRACURRICULAR PAGE
+========================== */
+.extracurricular-page {
+  min-height: 100vh;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.75)),
+              url('https://images.pexels.com/photos/1181396/pexels-photo-1181396.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') center/cover fixed;
+}
+
+.filter-bar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  margin-bottom: 2.5rem;
+  justify-content: center;
+}
+
+.filter-bar input,
+.filter-bar select {
+  padding: 0.8rem 1.2rem;
+  border-radius: 30px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(15, 23, 42, 0.8);
+  backdrop-filter: blur(8px);
+  color: white;
+  font-size: 0.95rem;
+  outline: none;
+  transition: all 0.3s;
+}
+
+.filter-bar input:focus,
+.filter-bar select:focus {
+  border-color: #60a5fa;
+  box-shadow: 0 0 15px rgba(96, 165, 250, 0.4);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.8rem;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* Extracurricular & Scholarship cards with DIFFERENT colored boxes */
+.card {
+  border-radius: 20px;
+  padding: 1.8rem;
+  transition: all 0.35s ease;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: white;
+}
+
+/* Unique background colors for each card (extracurricular page) */
+.card:nth-child(1) { background: rgba(37, 99, 235, 0.75); }  /* Blue */
+.card:nth-child(2) { background: rgba(139, 92, 246, 0.75); } /* Purple */
+.card:nth-child(3) { background: rgba(6, 182, 212, 0.75); }  /* Cyan */
+.card:nth-child(4) { background: rgba(245, 158, 11, 0.75); } /* Amber */
+.card:nth-child(5) { background: rgba(34, 197, 94, 0.75); }  /* Green */
+.card:nth-child(6) { background: rgba(236, 72, 153, 0.75); } /* Pink */
+.card:nth-child(7) { background: rgba(168, 85, 247, 0.75); } /* Violet */
+.card:nth-child(8) { background: rgba(251, 146, 60, 0.75); } /* Orange */
+.card:nth-child(9) { background: rgba(20, 184, 166, 0.75); } /* Teal */
+.card:nth-child(10) { background: rgba(239, 68, 68, 0.75); } /* Red */
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 25px 40px -15px rgba(0, 0, 0, 0.5);
+  filter: brightness(1.1);
+}
+
+.card h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.6rem;
+}
+
+.card h3 a {
+  color: white;
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+.card p {
+  font-size: 0.9rem;
+  opacity: 0.9;
+}
+
+/* ==========================
+   SCHOLARSHIP PAGE (similar grid, distinct colors)
+========================== */
+.scholarship-page {
+  min-height: 100vh;
+  padding: 2.5rem 2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.68), rgba(0, 0, 0, 0.75)),
+              url('https://images.pexels.com/photos/4386321/pexels-photo-4386321.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') center/cover fixed;
+}
+
+/* Scholarship cards get a different set of vibrant colors */
+.scholarship-page .card:nth-child(1) { background: rgba(16, 185, 129, 0.8); } /* Emerald */
+.scholarship-page .card:nth-child(2) { background: rgba(99, 102, 241, 0.8); } /* Indigo */
+.scholarship-page .card:nth-child(3) { background: rgba(217, 70, 239, 0.75); } /* Fuchsia */
+.scholarship-page .card:nth-child(4) { background: rgba(251, 191, 36, 0.8); } /* Yellow */
+.scholarship-page .card:nth-child(5) { background: rgba(2, 132, 199, 0.8); }  /* Sky */
+.scholarship-page .card:nth-child(6) { background: rgba(225, 29, 72, 0.8); }  /* Rose */
+.scholarship-page .card:nth-child(7) { background: rgba(21, 128, 61, 0.8); }  /* Forest */
+.scholarship-page .card:nth-child(8) { background: rgba(126, 34, 206, 0.8); } /* Purple */
+.scholarship-page .card:nth-child(9) { background: rgba(194, 65, 12, 0.8); }  /* Rust */
+.scholarship-page .card:nth-child(10) { background: rgba(13, 148, 136, 0.8); }/* Teal */
+
+/* ==========================
+   SAT PREP PAGE
+========================== */
+.satprep-container {
+  min-height: 100vh;
+  padding: 3rem 2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.75)),
+              url('https://images.pexels.com/photos/256417/pexels-photo-256417.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') center/cover fixed;
+  color: white;
+}
+
+.module-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.8rem;
+  margin-top: 2rem;
+}
+
+.module-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 2rem 1.5rem;
+  text-align: center;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  animation: floatCard 4.5s infinite ease-in-out;
+}
+
+@keyframes floatCard {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-12px); }
+}
+
+.module-card:hover {
+  transform: scale(1.06);
+  box-shadow: 0 0 30px rgba(96, 165, 250, 0.6), 0 0 60px rgba(96, 165, 250, 0.3);
+  background: rgba(255, 255, 255, 0.18);
+}
+
+/* ==========================
+   CONTACT PAGE
+========================== */
+.contact-section {
+  min-height: 100vh;
+  padding: 3rem 2rem;
+  background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.75)),
+              url('https://images.pexels.com/photos/3183197/pexels-photo-3183197.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2') center/cover fixed;
+  color: white;
+}
+
+.contact-form {
+  max-width: 600px;
+  margin: 2rem auto;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  padding: 2.2rem;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+ .contact-form input,
+.contact-form textarea {
+  width: 100%;
+  margin: 0.8rem 0;
+  padding: 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 14px;
+  background: rgba(15, 23, 42, 0.7);
+  color: white;
+  font-size: 1rem;
+  transition: all 0.3s;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: none;
+  border-color: #8b5cf6;
+  box-shadow: 0 0 20px rgba(139, 92, 246, 0.5);
+}
+
+.contact-form button {
+  background: #8b5cf6;
+  color: white;
+  border: none;
+  padding: 1rem 2.2rem;
+  border-radius: 30px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s;
+  margin-top: 1rem;
+  width: 100%;
+}
+
+.contact-form button:hover {
+  transform: scale(1.03);
+  box-shadow: 0 0 35px #8b5cf6;
+  background: #7c3aed;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+.site-footer {
+  background: #0b1120;
+  text-align: center;
+  padding: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.site-footer p {
+  color: #94a3b8;
+  margin-bottom: 0.8rem;
+}
+
+.footer-links a {
+  color: #60a5fa;
+  margin: 0 1rem;
+  font-weight: 500;
+  transition: color 0.3s;
+}
+
+.footer-links a:hover {
+  color: #a5b4fc;
+  text-decoration: underline;
+}
+
+/* ==========================
+   RESPONSIVE DESIGN
+========================== */
+@media (max-width: 768px) {
+  .site-header {
+    flex-direction: column;
+    gap: 1rem;
+    padding: 1rem;
+  }
+
+  .site-header nav {
+    gap: 1.2rem;
+  }
+
+  .hero {
+    flex-direction: column;
+    padding: 2rem 1.2rem;
+    text-align: center;
+  }
+
+  .hero-image img {
+    max-width: 300px;
+    margin: 0 auto;
+  }
+
+  .home-grid,
+  .cards,
+  .module-grid {
+    grid-template-columns: 1fr;
+    padding: 1.5rem;
+  }
+
+  .testimonial-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-text h2 {
+    font-size: 2rem;
+  }
+
+  .filter-bar {
+    flex-direction: column;
+    align-items: stretch;
+  }
+}

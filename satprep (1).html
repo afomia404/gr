@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SAT Prep - College Habesha</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="site-header">
+    <h1>SAT Prep - College Habesha</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="extracurricular.html">Extracurriculars</a>
+      <a href="scholarship.html">Scholarships</a>
+      <a href="contact.html">Contact</a>
+    </nav>
+  </header>
+
+  <main class="satprep-container">
+    <section class="satprep-hero">
+      <h2>Sharpen Your Skills</h2>
+      <p>Select a module below and start practicing!</p>
+    </section>
+
+    <div id="modules" class="module-grid">
+      <div class="module-card" onclick="loadModule('Math')">📐 Math</div>
+      <div class="module-card" onclick="loadModule('Reading')">📖 Reading</div>
+      <div class="module-card" onclick="loadModule('Writing')">✍️ Writing</div>
+      <div class="module-card" onclick="loadModule('Science')">🔬 Science</div>
+      <div class="module-card" onclick="loadModule('Vocabulary')">📚 Vocabulary</div>
+      <div class="module-card" onclick="loadModule('Logic')">🧩 Logic</div>
+    </div>
+
+    <div id="quiz" class="quiz-area"></div>
+    <div id="results" class="results-area"></div>
+    <div id="dashboard" class="dashboard-area"></div>
+  </main>
+
+  <script src="script1.js"></script>
+</body>
+</html>
